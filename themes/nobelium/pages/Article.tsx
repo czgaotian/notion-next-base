@@ -1,11 +1,11 @@
 import LayoutBase from '../layout/LayoutBase';
-import ArticleLock from '../components/ArticleLock';
+import ArticleLock from '@/components/ArticleLock';
 import ArticleInfo from '../components/ArticleInfo';
 import ArticleFooter from '../components/ArticleFooter';
 // TODO: move to theme file
-import NotionPage from 'components/NotionPage';
-import ShareBar from 'components/ShareBar';
-import Comment from 'components/Comment';
+import NotionPage from '@/components/NotionPage';
+import ShareBar from '@/components/ShareBar';
+import Comment from '@/components/Comment';
 import { useSiteStore } from 'providers/siteProvider';
 import { useShallow } from 'zustand/react/shallow';
 
