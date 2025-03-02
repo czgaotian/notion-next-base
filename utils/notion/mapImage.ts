@@ -40,7 +40,8 @@ export const mapImgUrl = (
     !hasConverted &&
     ((block as Block).type === 'bookmark' ||
       ret.includes('secure.notion-static.com') ||
-      ret.includes('prod-files-secure'));
+      ret.includes('prod-files-secure') ||
+      ret.indexOf('attachment') === 0);
 
   // 使用Notion图传
   if (needConvert) {
