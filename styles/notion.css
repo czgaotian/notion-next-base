@@ -2044,6 +2044,10 @@ svg.notion-page-icon {
   user-select: all;
 }
 
+.notion-equation-inline .katex-display {
+  margin: 0;
+}
+
 .notion-equation-block {
   display: flex;
   flex-direction: column;
