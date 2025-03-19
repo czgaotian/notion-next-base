@@ -210,11 +210,10 @@ function getNavList(navPages: Page[]): Nav[] {
 
   navPages.forEach((page) => {
     const navItem = pageMap[page.id];
-    if (page.parentId) {
-      const parent = pageMap[page.parentId];
-      if (parent) {
-        parent.subMenus!.push(navItem);
-      }
+    if (page.childrenIds) {
+      navItem.subMenus = page.childrenIds
+        .map((id) => pageMap[id])
+        .filter(Boolean);
     }
   });
 
