@@ -36,22 +36,24 @@ export const NavItem: FC<NavItemProps> = ({ nav }) => {
             className={`flex items-center text-black dark:text-gray-50`}
             onClick={toggleShow}
           >
-            {nav?.icon && (
-              <div className="mr-2">
-                <i className={nav?.icon} />
-              </div>
+            {nav?.icon && <i className={nav?.icon} />}
+            {nav.title && (
+              <span className={`font-medium ${nav?.icon && 'ml-2'}`}>
+                {nav?.title}
+              </span>
             )}
-            <span className="font-medium">{nav?.title}</span>
             <i
               className={`fas fa-chevron-down ml-2 transition-all duration-200 ${isOpen ? ' rotate-180' : ''}`}
             ></i>
           </div>
         ) : (
           <Link className={`block text-black dark:text-gray-50`} href={nav?.to}>
-            <span className="mr-2">
-              {nav?.icon && <i className={nav?.icon} />}
-            </span>
-            <span className="font-medium">{t(nav.title)}</span>
+            {nav?.icon && <i className={nav?.icon} />}
+            {nav.title && (
+              <span className={`font-medium ${nav.icon && 'ml-2'}`}>
+                {t(nav.title)}
+              </span>
+            )}
           </Link>
         )}
       </div>
