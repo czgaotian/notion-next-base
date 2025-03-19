@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <footer className="relative z-10 m-auto mt-6 w-full max-w-2xl flex-shrink-0 px-4 text-gray-600 transition-all dark:text-gray-400">
       <hr className="border-gray-200 dark:border-gray-800" />
-      <div className="my-4 text-sm leading-6">
+      <div className="my-4 flex flex-col items-center text-sm leading-6">
         <div className="flex flex-col items-center md:flex-row">
           <div className="mr-0 md:mr-2">
             © {AUTHOR} {copyrightDate}.
@@ -44,6 +44,12 @@ const Footer = () => {
             />
           </div>
         </div>
+        <a
+          href="https://github.com/czgaotian/notion-next-base"
+          className="text-gray-400"
+        >
+          Powered by notion-next-base
+        </a>
       </div>
     </footer>
   );
