@@ -79,12 +79,8 @@ const MenuItem = ({ menu }: { menu: Nav }) => {
       href={menu.to}
       className="cursor flex p-3 text-gray-800 transition-all duration-200  hover:bg-gray-200  dark:text-gray-200 dark:hover:bg-gray-800"
     >
-      {menu.icon && (
-        <div className="mr-2">
-          <i className={menu.icon} />
-        </div>
-      )}
-      <div>{menu.title}</div>
+      {menu.icon && <i className={menu.icon} />}
+      {menu.title && <div className={menu.icon && 'ml-2'}>{menu.title}</div>}
     </Link>
   );
 };
@@ -99,12 +95,8 @@ const SubMenuItem = ({ menu }: { menu: Nav }) => {
         onClick={toggleOpen}
         className="flex cursor-pointer p-3 text-gray-800 transition-all duration-200 hover:bg-gray-200/40 dark:text-gray-200 dark:hover:bg-gray-800/40"
       >
-        {menu?.icon && (
-          <div className="mr-2">
-            <i className={menu.icon} />
-          </div>
-        )}
-        <div>{menu.title}</div>
+        {menu?.icon && <i className={menu.icon} />}
+        {menu.title && <div className={menu.icon && 'ml-2'}>{menu.title}</div>}
         <div className="ml-auto flex items-center">
           <i
             className={`fas fa-chevron-down transition-all duration-200 ${isOpen ? 'rotate-180' : ''}`}
