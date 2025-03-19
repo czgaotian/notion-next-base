@@ -1,4 +1,3 @@
-import Vercel from 'components/Vercel';
 import { Trans, useTranslation } from 'next-i18next';
 import { useShallow } from 'zustand/react/shallow';
 import { useConfigStore } from 'providers/configProvider';
@@ -44,7 +43,6 @@ const Footer = () => {
               }}
             />
           </div>
-          <Vercel />
         </div>
       </div>
     </footer>
