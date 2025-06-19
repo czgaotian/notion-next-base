@@ -1,6 +1,6 @@
 import { BASE_URL } from '@/constants';
 
-export const isProduct = () => process.env.VERCEL_ENV === 'product';
+export const isProduct = () => process.env.NODE_ENV === 'production';
 
 /**
  * 判断是否客户端
