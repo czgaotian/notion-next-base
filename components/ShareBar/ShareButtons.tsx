@@ -384,7 +384,7 @@ const ShareButtons = ({
                   id="pop"
                   className={
                     (qrCodeShow ? 'opacity-100 ' : ' invisible opacity-0') +
-                    ' absolute -left-10 bottom-10 z-40 bg-white text-center shadow-xl transition-all duration-200'
+                    ' absolute -left-10 bottom-10 z-40 bg-white text-center shadow-xl transition-all'
                   }
                 >
                   <div className="mt-1 h-28 w-28 p-2">

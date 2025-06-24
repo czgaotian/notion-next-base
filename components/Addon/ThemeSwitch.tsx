@@ -22,8 +22,8 @@ const ThemeSwitch = () => {
         style={{ left: '10px', top: '80vh' }}
         className="fixed z-50 rounded-2xl bg-gray-50 drop-shadow-lg dark:bg-black dark:text-white"
       >
-        <div className="group flex w-full items-center p-3 text-sm transition-all duration-200">
-          <div className="w-0 overflow-hidden transition-all duration-200 group-hover:w-20">
+        <div className="group flex w-full items-center p-3 text-sm transition-all">
+          <div className="w-0 overflow-hidden transition-all group-hover:w-20">
             <select
               value={theme}
               onChange={onSelectChange}

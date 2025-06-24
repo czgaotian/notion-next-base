@@ -28,7 +28,7 @@ export const NavItem: FC<NavItemProps> = ({ nav }) => {
   return nav.show ? (
     <div className="relative">
       <div
-        className="cursor-pointer rounded-full px-4 py-2 text-gray-800 hover:bg-gray-200/40 dark:text-gray-200 dark:hover:bg-gray-800/40"
+        className="cursor-pointer rounded-full px-4 py-2 text-gray-800 transition-all hover:bg-gray-200/40 dark:text-gray-200 dark:hover:bg-gray-800/40"
         ref={menuRef}
       >
         {hasSubMenu ? (
@@ -43,7 +43,7 @@ export const NavItem: FC<NavItemProps> = ({ nav }) => {
               </span>
             )}
             <i
-              className={`fas fa-chevron-down ml-2 transition-all duration-200 ${isOpen ? ' rotate-180' : ''}`}
+              className={`fas fa-chevron-down ml-2 transition-all ${isOpen ? ' rotate-180' : ''}`}
             ></i>
           </div>
         ) : (

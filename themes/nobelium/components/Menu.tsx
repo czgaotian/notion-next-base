@@ -27,7 +27,6 @@ export const Menu: FC<MenuProps> = (props) => {
     setIsOpen,
     excludeRef,
     clickOutSideClose = true,
-    className,
   } = props;
 
   const menuRef = useRef<HTMLDivElement>(null);
@@ -46,7 +45,7 @@ export const Menu: FC<MenuProps> = (props) => {
   return (
     <div
       ref={menuRef}
-      className={`${isOpen ? 'block' : 'hidden'}  rounded border border-gray-100 bg-white drop-shadow transition-all duration-300 dark:border-gray-900 dark:bg-black ${className}`}
+      className={`${isOpen ? 'block' : 'hidden'}  rounded border border-gray-100 bg-white drop-shadow transition-all duration-300 dark:border-gray-900 dark:bg-black`}
     >
       <MenuList menuList={menuList} isOpen={isOpen} />
     </div>
@@ -77,7 +76,7 @@ const MenuItem = ({ menu }: { menu: Nav }) => {
   return (
     <Link
       href={menu.to}
-      className="cursor flex p-3 text-gray-800 transition-all duration-200  hover:bg-gray-200  dark:text-gray-200 dark:hover:bg-gray-800"
+      className="cursor flex p-3 text-gray-800 transition-all  hover:bg-gray-200  dark:text-gray-200 dark:hover:bg-gray-800"
     >
       {menu.icon && <i className={menu.icon} />}
       {menu.title && <div className={menu.icon && 'ml-2'}>{menu.title}</div>}
@@ -93,13 +92,13 @@ const SubMenuItem = ({ menu }: { menu: Nav }) => {
     <>
       <div
         onClick={toggleOpen}
-        className="flex cursor-pointer p-3 text-gray-800 transition-all duration-200 hover:bg-gray-200/40 dark:text-gray-200 dark:hover:bg-gray-800/40"
+        className="flex cursor-pointer p-3 text-gray-800 transition-all hover:bg-gray-200/40 dark:text-gray-200 dark:hover:bg-gray-800/40"
       >
         {menu?.icon && <i className={menu.icon} />}
         {menu.title && <div className={menu.icon && 'ml-2'}>{menu.title}</div>}
         <div className="ml-auto flex items-center">
           <i
-            className={`fas fa-chevron-down transition-all duration-200 ${isOpen ? 'rotate-180' : ''}`}
+            className={`fas fa-chevron-down transition-all ${isOpen ? 'rotate-180' : ''}`}
           ></i>
         </div>
       </div>

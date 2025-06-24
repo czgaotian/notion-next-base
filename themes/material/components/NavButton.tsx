@@ -95,7 +95,7 @@ const MultiLevelMenuItem: FC<{
         <ListItemText primary={nav.title} />
         {hasSubMenu && (
           <i
-            className={`fas fa-chevron-down ml-2 transition-all duration-200 ${showSubMenu ? ' rotate-180' : ''}`}
+            className={`fas fa-chevron-down ml-2 transition-all ${showSubMenu ? ' rotate-180' : ''}`}
           ></i>
         )}
       </ListItemButton>
