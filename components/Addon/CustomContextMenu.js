@@ -149,7 +149,7 @@ export default function CustomContextMenu() {
           <div
             onClick={handleJumpToRandomPost}
             title={t('walk-around')}
-            className="flex h-10 w-full cursor-pointer flex-nowrap items-center justify-start rounded-lg px-2 transition-all duration-200 hover:bg-blue-600 hover:text-white"
+            className="flex h-10 w-full cursor-pointer flex-nowrap items-center justify-start rounded-lg px-2 transition-all hover:bg-blue-600 hover:text-white"
           >
             <i className="fa-solid fa-podcast mr-2" />
             <div className="whitespace-nowrap">{t('walk-around')}</div>
@@ -158,7 +158,7 @@ export default function CustomContextMenu() {
           <Link
             href="/category"
             title={t('category')}
-            className="flex h-10 w-full cursor-pointer flex-nowrap items-center justify-start rounded-lg px-2 transition-all duration-200 hover:bg-blue-600 hover:text-white"
+            className="flex h-10 w-full cursor-pointer flex-nowrap items-center justify-start rounded-lg px-2 transition-all hover:bg-blue-600 hover:text-white"
           >
             <i className="fa-solid fa-square-minus mr-2" />
             <div className="whitespace-nowrap">{t('category')}</div>
@@ -167,7 +167,7 @@ export default function CustomContextMenu() {
           <Link
             href="/tag"
             title={t('tags')}
-            className="flex h-10 w-full cursor-pointer flex-nowrap items-center justify-start rounded-lg px-2 transition-all duration-200 hover:bg-blue-600 hover:text-white"
+            className="flex h-10 w-full cursor-pointer flex-nowrap items-center justify-start rounded-lg px-2 transition-all hover:bg-blue-600 hover:text-white"
           >
             <i className="fa-solid fa-tag mr-2" />
             <div className="whitespace-nowrap">{t('tags')}</div>
@@ -181,7 +181,7 @@ export default function CustomContextMenu() {
           <div
             onClick={handleCopyLink}
             title={t('copy-url')}
-            className="flex h-10 w-full cursor-pointer flex-nowrap items-center justify-start rounded-lg px-2 transition-all duration-200 hover:bg-blue-600 hover:text-white"
+            className="flex h-10 w-full cursor-pointer flex-nowrap items-center justify-start rounded-lg px-2 transition-all hover:bg-blue-600 hover:text-white"
           >
             <i className="fa-solid fa-arrow-up-right-from-square mr-2" />
             <div className="whitespace-nowrap">{t('copy-url')}</div>
@@ -190,7 +190,7 @@ export default function CustomContextMenu() {
           <div
             onClick={handleChangeDarkMode}
             title={isDarkMode ? t('light-mode') : t('dark-mode')}
-            className="flex h-10 w-full cursor-pointer flex-nowrap items-center justify-start rounded-lg px-2 transition-all duration-200 hover:bg-blue-600 hover:text-white"
+            className="flex h-10 w-full cursor-pointer flex-nowrap items-center justify-start rounded-lg px-2 transition-all hover:bg-blue-600 hover:text-white"
           >
             {isDarkMode ? (
               <i className="fa-regular fa-sun mr-2" />
@@ -205,7 +205,7 @@ export default function CustomContextMenu() {
           <div
             onClick={handeChangeTheme}
             title={t('theme-switch')}
-            className="flex h-10 w-full cursor-pointer flex-nowrap items-center justify-start rounded-lg px-2 transition-all duration-200 hover:bg-blue-600 hover:text-white"
+            className="flex h-10 w-full cursor-pointer flex-nowrap items-center justify-start rounded-lg px-2 transition-all hover:bg-blue-600 hover:text-white"
           >
             <i className="fa-solid fa-palette mr-2" />
             <div className="whitespace-nowrap">{t('theme-switch')}</div>
