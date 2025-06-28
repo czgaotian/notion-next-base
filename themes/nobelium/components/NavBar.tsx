@@ -73,11 +73,13 @@ const NavBar: FC = () => {
 
   return (
     <div className="flex flex-shrink-0">
-      <ul className="hidden flex-row md:flex">
-        {navList.map((link) => (
-          <NavItem key={link?.id} nav={link} />
-        ))}
-      </ul>
+      {navList.map((link) => (
+        <NavItem
+          key={link?.id}
+          nav={link}
+          className="hidden flex-row md:flex"
+        />
+      ))}
 
       {CONFIG.MENU_RANDOM_POST && <RandomPostButton />}
       {CONFIG.MENU_SEARCH_BUTTON && <SearchButton />}

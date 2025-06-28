@@ -9,8 +9,10 @@ import { Menu } from './Menu';
 
 export interface NavItemProps {
   nav: Nav;
+  className?: string;
 }
-export const NavItem: FC<NavItemProps> = ({ nav }) => {
+
+export const NavItem: FC<NavItemProps> = ({ nav, className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
   const { t } = useTranslation('nav');
@@ -26,7 +28,7 @@ export const NavItem: FC<NavItemProps> = ({ nav }) => {
   const hasSubMenu = nav.subMenus && nav?.subMenus.length > 0;
 
   return nav.show ? (
-    <div className="relative">
+    <div className={`${className} relative`}>
       <div
         className="cursor-pointer rounded-full px-4 py-2 text-gray-800 transition-all hover:bg-gray-200/40 dark:text-gray-200 dark:hover:bg-gray-800/40"
         ref={menuRef}
@@ -59,7 +61,7 @@ export const NavItem: FC<NavItemProps> = ({ nav }) => {
       </div>
       {hasSubMenu && (
         <Menu
-          className="absolute right-4 top-10 w-60"
+          className="absolute left-0 top-10 w-60"
           menuList={nav.subMenus as Nav[]}
           isOpen={isOpen}
           setIsOpen={setIsOpen}

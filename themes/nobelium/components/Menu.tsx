@@ -1,10 +1,11 @@
 import Collapse from 'components/Collapse';
 import Link from 'next/link';
 import { useCallback, useRef, useState } from 'react';
+import classnames from '@/utils/classnames';
+import useToggleClickOutSide from '@/utils/hooks/useToggleClickOutSide';
 
 import type { FC, RefObject } from 'react';
 import type { Nav } from '@/types/notion';
-import useToggleClickOutSide from '@/utils/hooks/useToggleClickOutSide';
 
 export interface MenuProps {
   menuList: Nav[];
@@ -25,6 +26,7 @@ export const Menu: FC<MenuProps> = (props) => {
     menuList,
     isOpen,
     setIsOpen,
+    className = '',
     excludeRef,
     clickOutSideClose = true,
   } = props;
@@ -45,7 +47,14 @@ export const Menu: FC<MenuProps> = (props) => {
   return (
     <div
       ref={menuRef}
-      className={`${isOpen ? 'block' : 'hidden'}  rounded border border-gray-100 bg-white drop-shadow transition-all duration-300 dark:border-gray-900 dark:bg-black`}
+      className={classnames(
+        'rounded border border-gray-100 bg-white drop-shadow transition-all duration-300 dark:border-gray-900 dark:bg-black',
+        {
+          block: isOpen,
+          hidden: !isOpen,
+        },
+        className,
+      )}
     >
       <MenuList menuList={menuList} isOpen={isOpen} />
     </div>
