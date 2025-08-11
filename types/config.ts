@@ -39,12 +39,6 @@ export type SiteConfig = {
   FACEBOOK_PAGE: string;
   FACEBOOK_PAGE_TITLE: string;
 
-  // analytics ackee
-  ACKEE_ENABLE: boolean;
-  ACKEE_JS: string;
-  ACKEE_DATA_SERVER: string;
-  ACKEE_DOMAIN_ID: string;
-
   // vercel speed insights
   VERCEL_SPEED_INSIGHTS_ENABLE: boolean;
 
@@ -68,55 +62,17 @@ export type SiteConfig = {
   SEO_GOOGLE_SITE_VERIFICATION: string;
   SEO_BAIDU_SITE_VERIFICATION: string;
 
-  // comment artalk https://artalk.js.org
-  ARTALK_ENABLE: boolean;
-  ARTALK_SERVER: string;
-
-  // comment cusdis https://cusdis.com/
-  CUSDIS_ENABLE: boolean;
-  CUSDIS_APP_ID: string;
-  CUSDIS_HOST: string;
-  CUSDIS_BASE: string;
-
   // commen giscus https://giscus.app
   GISCUS_ENABLE: boolean;
   GISCUS_REPO: `${string}/${string}`;
   GISCUS_REPO_ID: string;
-  GISCUS_CATEGORY_ID: string;
+  GISCUS_CATEGORY?: string;
+  GISCUS_CATEGORY_ID?: string;
   GISCUS_MAPPING: Mapping;
-  GISCUS_REACTIONS_ENABLED: BooleanString;
-  GISCUS_EMIT_METADATA: BooleanString;
-  GISCUS_INPUT_POSITION: InputPosition;
-  GISCUS_LOADING: Loading;
-
-  // comment gitalk https://gitalk.github.io/
-  GITALK_ENABLE: boolean;
-  GITALK_CLIENT_ID: string;
-  GITALK_CLIENT_SECRET: string;
-  GITALK_REPO: string;
-  GITALK_OWNER: string;
-  GITALK_ADMIN: string[];
-  GITALK_DISTRACTION_FREE_MODE: boolean;
-
-  // comment twikoo https://twikoo.js.org
-  TWIKOO_ENABLE: boolean;
-  TWIKOO_CDN: string;
-  TWIKOO_ID: string;
-
-  // comment utterances https://utteranc.es/
-  UTTERANCES_ENABLE: boolean;
-  UTTERANCES_REPO: string;
-
-  // comment valine https://valine.js.org
-  VALINE_ENABLE: boolean;
-  VALINE_CDN: string;
-  VALINE_APP_ID: string;
-  VALINE_APP_KEY: string;
-  VALINE_SERVER_URLS: string;
-
-  // comment waline https://waline.js.org
-  WALINE_ENABLE: boolean;
-  WALINE_SERVER_URL: string;
+  GISCUS_REACTIONS_ENABLED?: BooleanString;
+  GISCUS_EMIT_METADATA?: BooleanString;
+  GISCUS_INPUT_POSITION?: InputPosition;
+  GISCUS_LOADING?: Loading;
 };
 
 export const siteConfig = (config: SiteConfig): SiteConfig => {

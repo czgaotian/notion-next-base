@@ -6,7 +6,7 @@ import { useConfigStore } from 'providers/configProvider';
 import { useShallow } from 'zustand/react/shallow';
 
 /**
- * Giscus评论 @see https://giscus.app/zh-CN
+ * Giscus评论 @see https://giscus.app
  * @returns {JSX.Element}
  * @constructor
  */
@@ -20,6 +20,7 @@ const GiscusComponent = () => {
   const {
     GISCUS_REPO,
     GISCUS_REPO_ID,
+    GISCUS_CATEGORY,
     GISCUS_CATEGORY_ID,
     GISCUS_MAPPING,
     GISCUS_REACTIONS_ENABLED,
@@ -30,6 +31,7 @@ const GiscusComponent = () => {
     useShallow((state) => ({
       GISCUS_REPO: state.GISCUS_REPO,
       GISCUS_REPO_ID: state.GISCUS_REPO_ID,
+      GISCUS_CATEGORY: state.GISCUS_CATEGORY,
       GISCUS_CATEGORY_ID: state.GISCUS_CATEGORY_ID,
       GISCUS_MAPPING: state.GISCUS_MAPPING,
       GISCUS_REACTIONS_ENABLED: state.GISCUS_REACTIONS_ENABLED,
@@ -43,6 +45,7 @@ const GiscusComponent = () => {
     <Giscus
       repo={GISCUS_REPO}
       repoId={GISCUS_REPO_ID}
+      category={GISCUS_CATEGORY}
       categoryId={GISCUS_CATEGORY_ID}
       mapping={GISCUS_MAPPING}
       reactionsEnabled={GISCUS_REACTIONS_ENABLED}

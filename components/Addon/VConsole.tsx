@@ -7,7 +7,6 @@ const VConsoleComponent = () => {
   const timerRef = useRef<NodeJS.Timeout | null>(null); // 定时器引用
   const vConsole = useRef<VConsole | null>(null);
 
-
   useEffect(() => {
     const clickListener = (event: MouseEvent) => {
       const now = Date.now();
