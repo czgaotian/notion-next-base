@@ -36,7 +36,7 @@ const Footer = () => {
               t={t}
               components={{
                 link: (
-                  <a href={LICENSE_URL} target="_blank">
+                  <a href={LICENSE_URL} className="hover:border-b">
                     {LICENSE}
                   </a>
                 ),
@@ -44,12 +44,15 @@ const Footer = () => {
             />
           </div>
         </div>
-        <a
-          href="https://github.com/czgaotian/notion-next-base"
-          className="text-gray-400"
-        >
-          Powered by notion-next-base
-        </a>
+        <div className="text-gray-400">
+          Powered by&ensp;
+          <a
+            href="https://github.com/czgaotian/notion-next-base"
+            className="hover:border-b"
+          >
+            notion-next-base
+          </a>
+        </div>
       </div>
     </footer>
   );
