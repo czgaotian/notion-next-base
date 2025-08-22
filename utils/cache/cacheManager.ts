@@ -7,6 +7,8 @@ import {
   MONGO_DB_NAME,
   MONGO_DB_URL,
 } from '@/constants';
+import { isProduct } from '@/utils';
+
 import type { CacheManager } from './types';
 
 let cacheManager: CacheManager;
@@ -27,7 +29,7 @@ export async function getDataFromCache<T>(
   key: string,
   force?: boolean,
 ): Promise<T | null> {
-  if (ENABLE_CACHE || force) {
+  if (isProduct() && (ENABLE_CACHE || force)) {
     const dataFromCache = await cacheManager.getCache(key);
     if (JSON.stringify(dataFromCache) === '[]') {
       return null;
