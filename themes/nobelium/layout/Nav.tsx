@@ -36,7 +36,7 @@ const Nav: FC = () => {
       <div
         ref={navRef}
         className={classnames(
-          'ease-[cubic-bezier(0.4, 0, 0, 1)] sticky top-0 z-10 flex h-6 min-w-min flex-row items-center justify-center px-4 py-8 transition-all duration-500 md:mb-12',
+          'ease-[cubic-bezier(0.4, 0, 0, 1)] sticky top-0 z-10 flex h-16 min-w-min flex-row items-center justify-center transition-all duration-500 md:mb-12',
           {
             'justify-between border-b border-gray-400 border-opacity-50 backdrop-blur-sm dark:border-gray-600':
               isSticky,
