@@ -17,13 +17,3 @@
 `NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_APP_KEY`: The Algolia search only app key.
 
 `NEXT_PUBLIC_ALGOLIA_INDEX`: The Algolia index name.
-
-## GISCUS comment
-
-`GISCUS_ENABLE`
-
-`GISCUS_REPO`
-
-`GISCUS_REPO_ID`
-
-`GISCUS_MAPPING`
