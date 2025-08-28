@@ -42,7 +42,13 @@ set following environment variables:
   <img src="/resources/pageId.png?raw=true">
 </details>
 
-Other environment variables, view [here](/resources/environment.md)
+- `NEXT_PUBLIC_THEMES`: The theme list of the site, can be directory name in themes folder, e.g. 'nobelium,material'. The first theme will be the default theme. If not set, the theme list is all themes in themes folder, and the default may be the random theme.
+
+- `NEXT_PUBLIC_BASE_URL`: The base URL of the site, like "https://gaotian.com" , for generating sitemap feed and other links. If not set, the default value is current host.
+
+- Other environment variables, view [here](/resources/environment.md)
+
+Change config with your info in `site.config.ts` file or Config tab in Notion template.
 
 ## Todo
 
