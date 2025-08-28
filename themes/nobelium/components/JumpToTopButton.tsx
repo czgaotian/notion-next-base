@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'next-i18next';
+import classnames from '@/utils/classnames';
 
 /**
  * 跳转到网页顶部
@@ -28,7 +29,13 @@ const JumpToTopButton = () => {
   return (
     <div
       title={t('top')}
-      className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition-all ${isShowButton ? 'opacity-100' : 'opacity-0'} text-gray-800 hover:bg-gray-200/40 dark:text-gray-200 dark:hover:bg-gray-800/40`}
+      className={classnames(
+        'flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-gray-800  transition-all hover:bg-gray-200/40 dark:text-gray-200 dark:hover:bg-gray-800/40',
+        {
+          'opacity-100': isShowButton,
+          'opacity-0': !isShowButton,
+        },
+      )}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
       <i className="fas fa-angle-up text-2xl" />
