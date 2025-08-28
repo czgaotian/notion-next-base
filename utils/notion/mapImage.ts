@@ -13,13 +13,13 @@ import { NOTION_HOST } from '@/constants';
  * @returns
  */
 export const mapImgUrl = (
-  img: string,
+  img: string | undefined,
   block: Block | PatchedCollection,
   type = 'block',
   needCompress = true,
 ) => {
   if (!img) {
-    return '';
+    return img;
   }
 
   let ret = '';
