@@ -24,9 +24,9 @@ export default function useToggleClickOutSide(
       }
     };
 
-    document.addEventListener('mouseup', handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
     return () => {
-      document.removeEventListener('mouseup', handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
     };
   }, [callback, targetRef]);
 }
