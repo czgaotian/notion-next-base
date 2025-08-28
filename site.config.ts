@@ -1,7 +1,7 @@
 import { siteConfig } from '@/types/config';
 
 export default siteConfig({
-  AUTHOR: 'gaotian',
+  AUTHOR: 'Gaotian',
   KEYWORDS: 'Notion, Site, Blog',
   SINCE: 2022,
   LICENSE: 'CC BY-NC-SA 4.0',
