@@ -28,6 +28,8 @@ This project is actively under development. Welcome to follow its progress, prov
 
 Duplicate [this Notion template](https://deeply-amount-134.notion.site/14297ce5427180bcb214d8c92a8e0be8?v=14297ce54271817b9f1e000c627ec579), and share it to the public.
 
+Change config with your info in `site.config.ts` file or Config tab in Notion template.
+
 Customize the `Config`, `Notice` and `HeadMenu` content in your duplicated Notion template. You can find Document for template [here](/resources/template.md).
 
 and then, just click
@@ -36,7 +38,7 @@ and then, just click
 
 set following environment variables:
 
-- `NEXT_PUBLIC_NOTION_PAGE_ID` (Required): The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
+- `NEXT_PUBLIC_NOTION_PAGE_ID` (Required): The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address.
 
 <details><summary>Wait for a second, what is Page ID？</summary>
   <img src="/resources/pageId.png?raw=true">
@@ -46,9 +48,7 @@ set following environment variables:
 
 - `NEXT_PUBLIC_BASE_URL`: The base URL of the site, like "https://gaotian.com" , for generating sitemap feed and other links. If not set, the default value is current host.
 
-- Other environment variables, view [here](/resources/environment.md)
-
-Change config with your info in `site.config.ts` file or Config tab in Notion template.
+- Other environment variables, view [here](/resources/environment.md).
 
 ## Todo
 
