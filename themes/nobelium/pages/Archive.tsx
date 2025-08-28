@@ -15,7 +15,7 @@ const Archive = () => {
 
   return (
     <LayoutBase>
-      <div className="mb-10 min-h-screen w-full p-3  pb-20 md:py-12">
+      <div className="min-h-screen w-full">
         {Object.keys(archive).map((archiveTitle) => (
           <BlogArchiveItem
             key={archiveTitle}
@@ -33,8 +33,8 @@ const BlogArchiveItem: FC<{
   archivePosts: Archive;
 }> = ({ archiveTitle, archivePosts }) => {
   return (
-    <div key={archiveTitle}>
-      <div id={archiveTitle} className="pb-4 pt-16 text-xl dark:text-gray-300">
+    <div key={archiveTitle} className="mb-16 last:mb-0">
+      <div id={archiveTitle} className="pb-4 text-xl dark:text-gray-300">
         {archiveTitle}
       </div>
       <div>
