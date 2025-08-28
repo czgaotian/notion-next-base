@@ -28,7 +28,7 @@ const Nav: FC = () => {
     return () => {
       if (sentinel) observer.unobserve(sentinel);
     };
-  }, [sentinelRef]);
+  }, []);
 
   return (
     <>
