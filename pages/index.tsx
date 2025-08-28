@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { getSiteData } from '@/utils/notion/getSiteData';
 import { getPostBlocks } from '@/utils/notion/getPostBlocks';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -7,8 +8,8 @@ import { useConfigStore } from '@/providers/configProvider';
 import ThemeLayout from '@/components/ThemeLayout';
 
 import type { GetStaticProps } from 'next';
-import { useEffect, type FC } from 'react';
-import type { HomeIndexProps } from '@/types';
+import { type FC } from 'react';
+import type { HomeIndexProps, PageMeta } from '@/types';
 import type { Page } from '@/types/notion';
 
 /**
@@ -29,10 +30,10 @@ const Index: FC<HomeIndexProps> = (props) => {
   useEffect(() => updateConfig(config), [config]);
   useEffect(() => updateRenderPosts(posts, 1, posts.length), [posts]);
 
-  const pageMeta = {
-    title: `${siteInfo?.title} | ${siteInfo?.description}`,
-    description: siteInfo?.description,
-    image: siteInfo?.pageCover,
+  const pageMeta: PageMeta = {
+    title: siteInfo?.title,
+    description: siteInfo?.description || '',
+    image: siteInfo?.pageCover || '',
     slug: '',
     type: 'website',
   };

@@ -39,8 +39,8 @@ const SearchDetail = (
 
   const pageMeta: PageMeta = {
     title: `${keyword || ''}${keyword ? ' | ' : ''}${t('search')} | ${siteInfo?.title}`,
-    description: siteInfo?.title,
-    image: siteInfo?.pageCover,
+    description: siteInfo?.description || '',
+    image: siteInfo?.pageCover || '',
     slug: 'search/' + (keyword || ''),
     type: 'website',
   };

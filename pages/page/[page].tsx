@@ -38,8 +38,8 @@ const Page: FC<PageIndexProps> = (props) => {
 
   const pageMeta: PageMeta = {
     title: `${props?.page} | Page | ${siteInfo?.title}`,
-    description: siteInfo?.description,
-    image: siteInfo?.pageCover,
+    description: siteInfo?.description || '',
+    image: siteInfo?.pageCover || '',
     slug: 'page/' + props.page,
     type: 'website',
   };

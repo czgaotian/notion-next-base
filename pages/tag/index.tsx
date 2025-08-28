@@ -33,8 +33,8 @@ const TagIndex: FC<TagIndexProps> = (props) => {
 
   const pageMeta: PageMeta = {
     title: `${t('tags')} | ${siteInfo?.title}`,
-    description: siteInfo?.description,
-    image: siteInfo?.pageCover,
+    description: siteInfo?.description || '',
+    image: siteInfo?.pageCover || '',
     slug: 'tag',
     type: 'website',
   };

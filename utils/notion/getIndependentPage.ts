@@ -1,5 +1,5 @@
 import { getPostBlocks } from './getPostBlocks';
-import { defaultMapImageUrl } from 'react-notion-x';
+import { defaultMapImageUrl } from 'notion-utils';
 import dayjs from 'dayjs';
 import { NOTION_HOST } from '@/constants';
 

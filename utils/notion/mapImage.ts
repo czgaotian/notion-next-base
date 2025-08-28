@@ -19,7 +19,7 @@ export const mapImgUrl = (
   needCompress = true,
 ) => {
   if (!img) {
-    return img;
+    return '';
   }
 
   let ret = '';

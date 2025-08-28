@@ -61,7 +61,7 @@ const Slug = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
     description: post?.summary || '',
     type: post?.type || '',
     slug: post?.slug || '',
-    image: post?.pageCoverThumbnail || siteInfo?.pageCover,
+    image: post?.pageCoverThumbnail || siteInfo?.pageCover || '',
     category: post?.category?.[0],
     tags: post?.tags,
   };

@@ -37,7 +37,7 @@ const NoFound: FC<PageNotFoundIndexProps> = (props) => {
     description: t('404_tips'),
     slug: '',
     type: 'website',
-    image: siteInfo?.pageCover,
+    image: siteInfo?.pageCover || '',
   };
 
   return (

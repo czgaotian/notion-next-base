@@ -50,8 +50,8 @@ const ArchiveIndex: FC<ArchiveIndexProps> = (props) => {
 
   const pageMeta: PageMeta = {
     title: `${t('archive')} | ${siteInfo?.title}`,
-    description: siteInfo?.description,
-    image: siteInfo?.pageCover,
+    description: siteInfo?.description || '',
+    image: siteInfo?.pageCover || '',
     slug: 'archive',
     type: 'website',
   };

@@ -29,8 +29,8 @@ const Category: FC<CategoryIndexProps> = (props) => {
 
   const pageMeta: PageMeta = {
     title: `${t('category')} | ${siteInfo?.title}`,
-    description: siteInfo?.description,
-    image: siteInfo?.pageCover,
+    description: siteInfo?.description || '',
+    image: siteInfo?.pageCover || '',
     slug: 'category',
     type: 'website',
   };

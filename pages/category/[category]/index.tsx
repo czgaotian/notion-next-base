@@ -42,9 +42,9 @@ const CategoryDetail: FC<CategoryDetailProps> = (props) => {
 
   const pageMeta: PageMeta = {
     title: `${props.category} | ${t('category')} | ${siteInfo?.title || ''}`,
-    description: siteInfo?.description,
+    description: siteInfo?.description || '',
     slug: 'category/' + props.category,
-    image: siteInfo?.pageCover,
+    image: siteInfo?.pageCover || '',
     type: 'website',
   };
 

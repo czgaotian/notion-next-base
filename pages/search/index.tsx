@@ -29,8 +29,8 @@ const SearchIndex: FC<SearchIndexProps> = (props) => {
 
   const pageMeta: PageMeta = {
     title: `${t('search')} | ${siteInfo.title}`,
-    description: siteInfo.description,
-    image: siteInfo.pageCover,
+    description: siteInfo.description || '',
+    image: siteInfo.pageCover || '',
     slug: 'search',
     type: 'website',
   };

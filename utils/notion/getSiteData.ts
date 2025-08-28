@@ -5,7 +5,7 @@ import { getCategories } from './getCategories';
 import getPageIds, { getConfigPageId } from './getPageIds';
 import { getTags } from './getTags';
 import getPageProperties from './getPageProperties';
-import { mapImgUrl, compressImage } from './mapImage';
+import { mapImgUrl } from './mapImage';
 import { PageStatus, PageType } from '@/types/notion';
 import dayjs from 'dayjs';
 import { isEmoji } from '@/utils';
@@ -232,20 +232,16 @@ function getSiteInfo(collection: PatchedCollection): SiteInfo {
   const description = collection.description
     ? Object.assign(collection).description[0][0]
     : '';
-  const pageCover = collection.cover
-    ? mapImgUrl(collection.cover, collection, 'collection')
-    : '';
-  let icon = collection?.icon
-    ? mapImgUrl(collection?.icon, collection, 'collection')
-    : '';
-
-  // 用户头像压缩一下
-  icon = compressImage(icon);
+  const pageCover =
+    collection.cover && mapImgUrl(collection.cover, collection, 'collection');
+  let icon =
+    collection?.icon && mapImgUrl(collection?.icon, collection, 'collection');
 
   // 站点图标不能是emoji
   if (!icon || isEmoji(icon)) {
     icon = '';
   }
+
   return { title, description, pageCover, icon };
 }
 
