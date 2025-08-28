@@ -4,7 +4,7 @@ A static site system built with Next.js and the Notion API, deployed on Vercel
 
 ## Intro
 
-This repository hosts my personal blog and portfolio website [gaotian.net](https://gaotian.net).
+This repository hosts my personal blog and portfolio website [gaotian.com](https://gaotian.com).
 
 It uses Notion as a CMS, powered by [notion-next-base](https://github.com/czgaotian/notion-next-base), and deployed on [Vercel](https://vercel.com).
 
