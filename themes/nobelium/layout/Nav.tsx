@@ -6,6 +6,7 @@ import LazyImage from '@/components/LazyImage';
 import NavBar from '../components/NavBar';
 import { useSiteStore } from '@/providers/siteProvider';
 import { useConfigStore } from '@/providers/configProvider';
+import { useTailWindMediaQuery } from '@/utils/hooks';
 import classnames from '@/utils/classnames';
 
 import type { FC } from 'react';
@@ -17,6 +18,7 @@ const Nav: FC = () => {
   const [remainingWidth, setRemainingWidth] = useState(0);
   const siteInfo = useSiteStore((state) => state.siteInfo);
   const AUTHOR = useConfigStore((state) => state.AUTHOR);
+  const isMD = useTailWindMediaQuery('md');
 
   useEffect(() => {
     const handler: IntersectionObserverCallback = ([entry]) => {
@@ -42,7 +44,7 @@ const Nav: FC = () => {
             total + (child as HTMLElement).getBoundingClientRect().width,
           0,
         );
-        setRemainingWidth(navWidth - childrenWidth);
+        setRemainingWidth(navWidth - childrenWidth - 1);
       }
     };
 
@@ -54,11 +56,11 @@ const Nav: FC = () => {
 
   return (
     <>
-      <div className="h-4 md:h-12" ref={sentinelRef} />
+      <div className="h-0 md:h-12" ref={sentinelRef} />
       <div
         ref={navRef}
         className={classnames(
-          'ease-[cubic-bezier(0.4, 0, 0, 1)] sticky top-0 z-10 flex h-16 w-full flex-row items-center justify-center font-medium transition-all duration-500 md:mb-12',
+          'ease-[cubic-bezier(0.4, 0, 0, 1)] sticky top-0 z-10 flex h-16 w-full flex-row items-center justify-between font-medium transition-all duration-500 md:mb-12 md:justify-center',
           {
             'border-b border-gray-400 border-opacity-50 backdrop-blur-sm dark:border-gray-600':
               isSticky,
@@ -70,7 +72,7 @@ const Nav: FC = () => {
           className={classnames(
             'mr-0 flex items-center rounded-full px-4 py-2 text-gray-800 transition-all hover:bg-gray-200/40 dark:text-gray-200 dark:hover:bg-gray-800/40 ',
           )}
-          style={{ marginRight: isSticky ? remainingWidth : 0 }}
+          style={{ marginRight: isMD && isSticky ? remainingWidth : 0 }}
           href="/"
           aria-label={siteInfo?.title}
         >

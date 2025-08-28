@@ -85,7 +85,7 @@ const MenuItem = ({ menu }: { menu: Nav }) => {
   return (
     <Link
       href={menu.to}
-      className="cursor flex p-3 text-gray-800 transition-all  hover:bg-gray-200  dark:text-gray-200 dark:hover:bg-gray-800"
+      className="cursor flex items-center p-3 text-gray-800 transition-all  hover:bg-gray-200  dark:text-gray-200 dark:hover:bg-gray-800"
     >
       {menu.icon && <i className={menu.icon} />}
       {menu.title && <div className={menu.icon && 'ml-2'}>{menu.title}</div>}
