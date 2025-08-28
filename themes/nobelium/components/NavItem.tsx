@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import type { FC } from 'react';
 import type { Nav } from '@/types/notion';
 import { Menu } from './Menu';
+import classnames from '@/utils/classnames';
 
 export interface NavItemProps {
   nav: Nav;
@@ -50,7 +51,7 @@ export const NavItem: FC<NavItemProps> = ({ nav, className = '' }) => {
           >
             {nav?.icon && <i className={nav?.icon} />}
             {nav.title && (
-              <span className={`font-medium ${nav?.icon && 'ml-2'}`}>
+              <span className={classnames({ 'ml-2': nav.icon })}>
                 {nav?.title}
               </span>
             )}
@@ -62,7 +63,7 @@ export const NavItem: FC<NavItemProps> = ({ nav, className = '' }) => {
           <div className={`block text-black dark:text-gray-50`}>
             {nav?.icon && <i className={nav?.icon} />}
             {nav.title && (
-              <span className={`font-medium ${nav.icon && 'ml-2'}`}>
+              <span className={classnames({ 'ml-2': nav.icon })}>
                 {t(nav.title)}
               </span>
             )}
