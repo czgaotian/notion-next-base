@@ -10,13 +10,13 @@ export interface BlogPostProps {
 }
 const BlogPost: FC<BlogPostProps> = ({ post, isShowSummary = true }) => {
   return (
-    <Link href={`/${post.slug}`}>
+    <Link href={`/${post.slug}`} className="mb-4 block last:mb-0">
       <div
         key={post.id}
-        className="mb-4 rounded px-3 py-2 last:mb-0 hover:bg-gray-200/40 md:mb-6 dark:hover:bg-gray-800/40"
+        className="rounded px-3 py-2 hover:bg-gray-200/40 dark:hover:bg-gray-800/40"
       >
         <header className="flex flex-col justify-between md:flex-row md:items-baseline">
-          <div className="mr-4 cursor-pointer text-lg font-medium text-gray-900 md:text-xl dark:text-gray-200">
+          <div className="mr-4 cursor-pointer text-lg font-medium text-gray-900 dark:text-gray-200">
             {post.title}
           </div>
           <time className="flex-shrink-0 text-gray-600 dark:text-gray-400">

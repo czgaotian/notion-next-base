@@ -25,7 +25,7 @@ const BlogListPage = () => {
   const pagePrefix = getPagePrefix(router.asPath);
 
   return (
-    <div className="my-6 w-full">
+    <div className="w-full">
       <div id="posts-wrapper">
         {posts?.map((post) => <BlogPost key={post.id} post={post} />)}
       </div>

@@ -33,8 +33,8 @@ const BlogArchiveItem: FC<{
   archivePosts: Archive;
 }> = ({ archiveTitle, archivePosts }) => {
   return (
-    <div key={archiveTitle} className="mb-16 last:mb-0">
-      <div id={archiveTitle} className="pb-4 text-xl dark:text-gray-300">
+    <div key={archiveTitle} className="mb-6 last:mb-0">
+      <div id={archiveTitle} className="mb-4 text-lg dark:text-gray-300">
         {archiveTitle}
       </div>
       <div>

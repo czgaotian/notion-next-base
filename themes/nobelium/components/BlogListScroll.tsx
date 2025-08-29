@@ -60,7 +60,7 @@ const BlogListScroll = () => {
           <h2 className="mb-4">
             <Link
               href={`/${post.slug}`}
-              className="text-xl text-black no-underline hover:underline md:text-2xl"
+              className="text-lg text-black no-underline hover:underline"
             >
               {post.title}
             </Link>
