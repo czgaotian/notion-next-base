@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="mr-0 md:mr-2">
             © {AUTHOR} {copyrightDate}.
           </div>
-          <div className="mb-2 mr-0 md:mb-0 md:mr-auto">
+          <div className="mr-0 md:mr-auto">
             <Trans
               i18nKey="copyright-notice"
               t={t}
