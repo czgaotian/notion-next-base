@@ -38,7 +38,10 @@ const CategoryDetail: FC<CategoryDetailProps> = (props) => {
     () => updateRenderPosts(posts, 1, resultCount),
     [posts, resultCount],
   );
-  useEffect(() => updateCategory(category), [category]);
+  useEffect(() => {
+    updateCategory(category);
+    return () => updateCategory('');
+  }, [category]);
 
   const pageMeta: PageMeta = {
     title: `${props.category} | ${t('category')} | ${siteInfo?.title || ''}`,
