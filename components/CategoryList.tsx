@@ -1,6 +1,7 @@
 import { useSiteStore } from 'providers/siteProvider';
 import Link from 'next/link';
 import { useShallow } from 'zustand/react/shallow';
+import classnames from '@/utils/classnames';
 
 const CategoryList = () => {
   const { category: currentCategory, categoryOptions } = useSiteStore(
@@ -20,11 +21,13 @@ const CategoryList = () => {
             legacyBehavior
           >
             <div
-              className={`cursor-pointer rounded-full px-5 py-2 hover:bg-gray-100 hover:text-black dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white ${
-                category.name === currentCategory
-                  ? 'bg-gray-100 text-black dark:bg-gray-600 dark:text-white'
-                  : ''
-              }`}
+              className={classnames(
+                'mr-3 cursor-pointer rounded-full px-3 py-2 hover:bg-gray-100 hover:text-black dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white',
+                {
+                  'bg-gray-100 text-black dark:bg-gray-600 dark:text-white':
+                    category.name === currentCategory,
+                },
+              )}
             >
               <i className="fas fa-folder mr-4" />
               {category.name}({category.count})

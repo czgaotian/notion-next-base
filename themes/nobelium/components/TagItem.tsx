@@ -23,7 +23,6 @@ const TagItem = ({
         }}
       >
         <div className="font-light">
-          <i className="fas fa-tag mr-1" />
           <span>{tag}</span>
           {count && <span className="ml-1">({count})</span>}
         </div>

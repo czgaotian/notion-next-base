@@ -18,7 +18,7 @@ const SearchDetail = () => {
   return (
     <LayoutBase>
       <SearchInput />
-      <div className="mt-6 text-3xl font-bold text-black dark:text-white">
+      <div className="mb-4 mt-5 px-3 text-3xl font-bold text-black dark:text-white">
         {keyword}
       </div>
       <BlogList />

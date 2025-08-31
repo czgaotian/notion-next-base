@@ -5,7 +5,7 @@ const TagList = () => {
   const tagOptions = useSiteStore((state) => state.tagOptions);
 
   return (
-    <div id="tags-list" className="flex flex-wrap duration-200">
+    <div id="tags-list" className="flex flex-wrap pl-3 duration-200">
       {tagOptions.map((tag) => {
         return (
           <TagItem
