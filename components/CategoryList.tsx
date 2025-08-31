@@ -30,7 +30,10 @@ const CategoryList = () => {
               )}
             >
               <i className="fas fa-folder mr-4" />
-              {category.name}({category.count})
+              <span>{category.name}</span>
+              {category.count && (
+                <span className="ml-1">({category.count})</span>
+              )}
             </div>
           </Link>
         );
